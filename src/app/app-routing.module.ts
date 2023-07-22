@@ -12,7 +12,7 @@ import {NavegaComponent} from './navega/navega.component';
 import {PokemonListComponent} from './pokemon-list/pokemon-list.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'blog', component: BlogPageComponent },
   { path: 'blog/my-best-blog', component: PostComponent },

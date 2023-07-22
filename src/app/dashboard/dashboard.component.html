@@ -4,15 +4,27 @@
       <img src="https://www.pngall.com/wp-content/uploads/13/Pokemon-Logo-Background-PNG.png"  style="height: 40px; margin-right: 10px;">
       
   </div>
-  <div>
-      <button mat-icon-button [matMenuTriggerFor]="menu">
-          <mat-icon style="margin-right: 10px;" matBadge="2"
-              matBadgeColor="accent">notifications</mat-icon>
-      </button>
-      <mat-menu #menu="matMenu">
+  <div>   
+
+      <div>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon style="margin-right: 10px;" matBadge="2"
+                matBadgeColor="accent">notifications</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
           <button mat-menu-item>Nueva solicitud de acceso a Poke ...</button>
           <button mat-menu-item>Nuevos usuarios en PokemonBlog ... </button>
-      </mat-menu>
+        </mat-menu>
+
+        <button mat-icon-button [matMenuTriggerFor]="userMenu">
+            <mat-icon style="margin-right: 10px;"  matBadgeColor="accent">person</mat-icon>
+
+        </button>
+        <mat-menu #userMenu="matMenu">
+            <button mat-menu-item (click)="openLogin()">Login</button>
+            <button mat-menu-item (click)="logout()">Cerrar sesión</button>
+        </mat-menu>
+    </div>
 
   </div>
 </mat-toolbar>
@@ -38,7 +50,7 @@
   
       <mat-list-item>
         <mat-icon matListIcon>exit_to_app</mat-icon>
-        <a matLine href="#" (click)="logout()">Cerrar Sesión</a>
+        <a matLine href="login" (click)="logout()">Cerrar Sesión</a>
       </mat-list-item>
     </mat-nav-list>
   </mat-sidenav>

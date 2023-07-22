@@ -65,7 +65,9 @@ pageIndex: number = 0; // Página actual del paginador
     this.drawerService.toggleDrawer();
   }
   
-  
+  openLogin() {
+    this.router.navigate(['/login']);
+  }
   logout() {
     this.router.navigate(['/login']);
   }
